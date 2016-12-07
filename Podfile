@@ -4,6 +4,10 @@ platform :ios, '7.0'
 
 # ignore all warnings from all pods
 inhibit_all_warnings!
+def all_deps
+   pod 'JSQSystemSoundPlayer', '~> 2.0'
+end
 
-pod 'JSQSystemSoundPlayer', '~> 2.0'
-
+target :'JSQMessages' do
+   all_deps
+end
