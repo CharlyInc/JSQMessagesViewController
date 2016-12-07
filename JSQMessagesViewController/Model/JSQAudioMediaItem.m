@@ -54,6 +54,7 @@
         _audioData = [audioData copy];
         _audioViewAttributes = audioViewAttributes;
     }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopPlayingMedia:) name:@"stop_playing_media_in_ChatController" object:nil];
     return self;
 }
 
@@ -70,6 +71,10 @@
 - (instancetype)init
 {
     return [self initWithData:nil audioViewAttributes:[[JSQAudioMediaViewAttributes alloc] init]];
+}
+
+-(void)stopPlayingMedia:(NSNotification*)n{
+    [self clearCachedMediaViews];
 }
 
 - (void)dealloc
