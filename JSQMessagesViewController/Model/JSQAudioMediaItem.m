@@ -201,8 +201,9 @@
 
     // set progress to full, then fade back to the default state
     [self stopProgressTimer];
-    self.progressView.progress = 1;
-    [UIView transitionWithView:self.cachedMediaView
+    if(self.progressView){
+        self.progressView.progress = 1;
+        [UIView transitionWithView:self.cachedMediaView
                       duration:.2
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
@@ -212,6 +213,7 @@
                                                             forDuration:self.audioPlayer.duration];
                     }
                     completion:nil];
+    }
 }
 
 #pragma mark - JSQMessageMediaData protocol
