@@ -55,7 +55,7 @@
     self = [super init];
     if (self) {
         _cache = cache;
-        _minimumBubbleWidth = minimumBubbleWidth;
+        _minimumBubbleWidth = [UIScreen mainScreen].applicationFrame.size.width*0.7;//minimumBubbleWidth;
         _usesFixedWidthBubbles = usesFixedWidthBubbles;
         _layoutWidthForFixedWidthBubbles = 0.0f;
 
