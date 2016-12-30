@@ -225,7 +225,9 @@
 
 - (CGSize)mediaViewDisplaySize
 {
-    return CGSizeMake(160.0f,
+    //!!!
+    int avatarPadding = 7; //magic number alert
+    return CGSizeMake([UIScreen mainScreen].applicationFrame.size.width*0.7 + avatarPadding, //160.0f,
                       self.audioViewAttributes.controlInsets.top +
                       self.audioViewAttributes.controlInsets.bottom +
                       self.audioViewAttributes.playButtonImage.size.height);
