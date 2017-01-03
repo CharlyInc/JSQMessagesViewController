@@ -228,7 +228,7 @@
 //                      self.audioViewAttributes.controlInsets.bottom +
 //                      self.audioViewAttributes.playButtonImage.size.height);
     //!!!
-    return CGSizeMake([UIScreen mainScreen].applicationFrame.size.width/2 + 5, //160.0f,
+    return CGSizeMake([UIScreen mainScreen].applicationFrame.size.width*0.7 + 5, //160.0f,
                       self.audioViewAttributes.controlInsets.top +
                       self.audioViewAttributes.controlInsets.bottom +
                       self.audioViewAttributes.playButtonImage.size.height);
