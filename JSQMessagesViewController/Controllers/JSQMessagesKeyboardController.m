@@ -162,7 +162,7 @@ typedef void (^JSQAnimationCompletionBlock)(BOOL finished);
 
 - (void)jsq_unregisterForNotifications
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)jsq_didReceiveKeyboardDidShowNotification:(NSNotification *)notification
